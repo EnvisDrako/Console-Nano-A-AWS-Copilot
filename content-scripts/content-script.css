@@ -1,0 +1,105 @@
+/* Console Nano Content Script Styles */
+
+/* Element Highlighting */
+.console-nano-highlight {
+  position: relative;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.8),
+              0 0 20px 5px rgba(255, 153, 0, 0.4),
+              inset 0 0 10px rgba(255, 153, 0, 0.2) !important;
+  border: 2px solid #FF9900 !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  z-index: 999999 !important;
+  animation: console-nano-glow 2s ease-in-out infinite;
+  background: rgba(255, 153, 0, 0.1) !important;
+}
+
+/* Enhanced pulsing effect for extra attention */
+.console-nano-pulse {
+  animation: console-nano-intense-pulse 1s ease-in-out 3 !important;
+}
+
+@keyframes console-nano-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.8),
+                0 0 20px 5px rgba(255, 153, 0, 0.4),
+                inset 0 0 10px rgba(255, 153, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(255, 153, 0, 1),
+                0 0 30px 8px rgba(255, 153, 0, 0.6),
+                inset 0 0 15px rgba(255, 153, 0, 0.3);
+  }
+}
+
+@keyframes console-nano-intense-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.8),
+                0 0 20px 5px rgba(255, 153, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 6px rgba(255, 153, 0, 1),
+                0 0 40px 10px rgba(255, 153, 0, 0.8);
+  }
+}
+
+/* Enhanced tooltip for highlighted elements */
+.console-nano-highlight::before {
+  content: '👆 Click here';
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #FF9900, #ffb84d);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1000001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: console-nano-bounce 1.5s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Arrow pointing down from tooltip */
+.console-nano-highlight::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #FF9900;
+  pointer-events: none;
+  z-index: 1000001;
+}
+
+@keyframes console-nano-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Make sure highlight works on various element types */
+button.console-nano-highlight,
+a.console-nano-highlight,
+input.console-nano-highlight,
+select.console-nano-highlight {
+  outline: none !important;
+}
+
+/* Override any conflicting AWS styles */
+.console-nano-highlight * {
+  pointer-events: auto !important;
+}
