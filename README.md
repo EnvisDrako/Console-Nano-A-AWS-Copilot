@@ -8,7 +8,7 @@
 
 Console Nano is a Chrome extension that provides step-by-step guidance for AWS Console tasks using Google's Gemini Nano AI model running entirely on your device. No data leaves your browser - complete privacy guaranteed.
 
-![Console Nano Demo](https://via.placeholder.com/800x400/232F3E/FF9900?text=Console+Nano+Demo)
+![Console Nano Demo](https://youtu.be/G34KCvYEQPY)
 
 ## ✨ Features
 
@@ -298,3 +298,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 *Console Nano - Your private AWS co-pilot, powered by on-device AI*
+
