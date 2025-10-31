@@ -291,10 +291,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **GitHub Issues** - For bugs and feature requests
 - **Discussions** - For questions and community support
-- **Email** - [your-email@example.com] for private inquiries
 
 ---
 
 **Made with ❤️ for AWS developers who value privacy and efficiency**
+
 
 *Console Nano - Your private AWS co-pilot, powered by on-device AI*
